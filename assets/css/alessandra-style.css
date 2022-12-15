@@ -1,0 +1,34 @@
+.wpo-site-header #navbar > ul li a:hover, .wpo-site-header #navbar > ul li a:focus,
+.wpo-site-header .social-info ul li a i:before {
+    color: #b9265c;
+}
+
+.wpo-site-header #navbar > ul > li > a:before,
+.mini-cart .cart-count,
+.view-cart-btn,
+.theme-btn  {
+    background: #b9265c;
+}
+
+.back-to-top {
+    background-color: rgba(185,38,92, 0.7);
+    border: 2px solid #b9265c;
+}
+
+.back-to-top:hover,
+.theme-btn:hover, .view-cart-btn:hover, 
+.theme-btn:focus, .view-cart-btn:focus, 
+.theme-btn:active, .view-cart-btn:active, 
+.theme-btn-s3:hover, .theme-btn-s3:focus, 
+.theme-btn-s3:active, .theme-btn-s4:hover, 
+.theme-btn-s4:focus, 
+.theme-btn-s4:active {
+    background: #b9265c;
+}
+
+@media (max-width: 991px) {
+    .wpo-site-header .mobail-menu button,
+    .wpo-site-header #navbar {
+        background-color: #b9265c;
+    }
+}
