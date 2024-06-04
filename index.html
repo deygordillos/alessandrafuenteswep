@@ -8,23 +8,194 @@
     <meta name="author" content="wpOceans">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
     <title>Alessandra Fuentes - Wedding & Event Planner- WEP</title>
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/swiper.min.css" rel="stylesheet">
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/jquery-ui.css" rel="stylesheet">
-    <link href="assets/sass/style.css" rel="stylesheet">
-    <link href="assets/css/alessandra-style.css" rel="stylesheet">
+
+    <link rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/themify-icons.css">
+    <link rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/font-awesome.min.css">
+    <link rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/flaticon.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/bootstrap.min.css">
+
+    <style>
+        .preloader {
+            background-color: #939580;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 999999;
+            overflow: hidden;
+        }
+
+        .preloader .vertical-centered-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .preloader .vertical-centered-box:after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em;
+        }
+
+        .preloader .vertical-centered-box .content {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 0;
+        }
+
+        .preloader .vertical-centered-box .content img {
+            max-width: 65px;
+        }
+
+        .preloader * {
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .preloader .loader-circle {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            margin-left: -60px;
+            margin-top: -60px;
+        }
+
+        .preloader .loader-line-mask {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 60px;
+            height: 120px;
+            margin-left: -60px;
+            margin-top: -60px;
+            overflow: hidden;
+            -webkit-transform-origin: 60px 60px;
+            transform-origin: 60px 60px;
+            -webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+            -webkit-animation: rotate 1.2s infinite linear;
+            animation: rotate 1.2s infinite linear;
+        }
+
+        .preloader .loader-line-mask .loader-line {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+        }
+
+
+        /* 3.9 wpo-partners-section */
+        .wpo-partners-section .container {
+            position: relative;
+        }
+
+        .wpo-partners-section .owl-carousel .owl-stage-outer {
+            border-left: 1px solid #D3D3D3;
+            border-right: 1px solid #D3D3D3;
+        }
+
+        .wpo-partners-section .grid {
+            text-align: center;
+            border: 1px solid #D3D3D3;
+            height: 180px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            margin-left: -1px;
+        }
+
+        @media (max-width: 991px) {
+            .wpo-partners-section .grid {
+                height: 120px;
+            }
+        }
+
+        .wpo-partners-section .owl-item:nth-child(even) .grid {
+            background: #F8F8F8;
+        }
+
+        .wpo-partners-section .grid img {
+            width: auto;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .wpo-partners-section .owl-nav {
+            display: none;
+        }
+    </style>
+
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/animate.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/owl.carousel.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/owl.theme.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/slick.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/slick-theme.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/swiper.min.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/nice-select.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/owl.transitions.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/jquery.fancybox.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/odometer-theme-default.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/jquery-ui.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/sass/style.blog.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/sass/style.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all"
+        href="assets/css/alessandra-style.css">
+    <noscript>
+        <link href="assets/css/themify-icons.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/flaticon.css" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link href="assets/css/owl.carousel.css" rel="stylesheet">
+        <link href="assets/css/owl.theme.css" rel="stylesheet">
+        <link href="assets/css/slick.css" rel="stylesheet">
+        <link href="assets/css/slick-theme.css" rel="stylesheet">
+        <link href="assets/css/swiper.min.css" rel="stylesheet">
+        <link href="assets/css/nice-select.css" rel="stylesheet">
+        <link href="assets/css/owl.transitions.css" rel="stylesheet">
+        <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+        <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+        <link href="assets/css/jquery-ui.css" rel="stylesheet">
+        <link href="assets/sass/style.blog.css" rel="stylesheet">
+        <link href="assets/sass/style.css" rel="stylesheet">
+        <link href="assets/css/alessandra-style.css" rel="stylesheet">
+    </noscript>
 </head>
 
 <body>
@@ -62,8 +233,8 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo-alessandra.svg"
-                                            alt=""></a>
+                                    <a class="navbar-brand" href="index.html"><img
+                                            src="assets/images/logo-alessandra.svg" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-1 col-1">
@@ -91,29 +262,30 @@
             <div class="wedding-announcement">
                 <div class="couple-text">
                     <h2 class="wow slideInUp" data-wow-duration="1s">Planificando tus más preciados momentos</h2>
-                    <p class="wow slideInUp" data-wow-duration="1.8s">Hagamos tu día memorable. Tu exitoso evento es nuestro trabajo.</p>
+                    <p class="wow slideInUp" data-wow-duration="1.8s">Hagamos tu día memorable. Tu exitoso evento es
+                        nuestro trabajo.</p>
                 </div>
             </div>
 
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-1.jpg">
+                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-1.webp">
                         </div> <!-- end slide-inner -->
                     </div> <!-- end swiper-slide -->
 
                     <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-2.jpg">
+                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-2.webp">
                         </div> <!-- end slide-inner -->
                     </div> <!-- end swiper-slide -->
 
                     <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-3.jpg">
+                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-3.webp">
                         </div> <!-- end slide-inner -->
                     </div> <!-- end swiper-slide -->
 
                     <div class="swiper-slide">
-                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-4.jpg">
+                        <div class="slide-inner slide-bg-image" data-background="assets/images/slider/slide-4.webp">
                         </div> <!-- end slide-inner -->
                     </div> <!-- end swiper-slide -->
                 </div>
@@ -241,13 +413,13 @@
                             <div class="wpo-about-text wow fadeInRightSlow" data-wow-duration="1700ms">
                                 <h2>Sobre nosotros</h2>
                                 <h4>Somos la mejor opción para ti</h4>
-                                <p>El objetivo que tenemos es dar a cada pareja el matrimonio 
-                                    con el que siempre han soñado. 
-                                    Transformarán cada una de sus ideas para convertirlas en realidad, 
-                                    promoviendo un ambiente relajado y 
-                                    sin estrés para ustedes y sus invitados. 
-                                    Gracias a ellos ahorrarán tiempo y esfuerzo, consiguiendo una 
-                                    celebración que perdurará por siempre 
+                                <p>El objetivo que tenemos es dar a cada pareja el matrimonio
+                                    con el que siempre han soñado.
+                                    Transformarán cada una de sus ideas para convertirlas en realidad,
+                                    promoviendo un ambiente relajado y
+                                    sin estrés para ustedes y sus invitados.
+                                    Gracias a ellos ahorrarán tiempo y esfuerzo, consiguiendo una
+                                    celebración que perdurará por siempre
                                     en sus recuerdos.
                                 </p>
                                 <a href="contact.html" class="theme-btn">AGENDAR</a>
@@ -331,10 +503,9 @@
             <h2 class="hidden">some</h2>
             <div class="container-fluid">
                 <div class="video-wrap">
-                    <img style="width: 100%"
-                    src="assets/images/cta_574x383.jpg"  alt=""
-                    srcset="assets/images/cta_574x383.jpg 574w, assets/images/cta_1148x765.jpg 1148w, assets/images/cta_1722x1148.jpg 1722w"
-                    sizes="100vw">
+                    <img style="width: 100%" src="assets/images/cta_574x383.jpg" alt=""
+                        srcset="assets/images/cta_574x383.jpg 574w, assets/images/cta_1148x765.jpg 1148w, assets/images/cta_1722x1148.jpg 1722w"
+                        sizes="100vw">
                     <a href="https://www.youtube.com/embed/OUB6zKc-Tos" class="video-btn" data-type="iframe"><i
                             class="fi flaticon-play"></i></a>
                 </div>
@@ -428,9 +599,8 @@
         <!-- start of wpo-contact-section -->
         <section class="wpo-contact-section-s2 section-padding">
             <div class="contact-bg">
-                <img style="width: 100%"
-                    src="assets/images/contact/img-3_574x383.jpg"  alt=""
-                    srcset="assets/images/contact/img-3_574x383.jpg 574w, assets/images/contact/img-3_1148x766.jpg 1148w, assets/images/contact/img-3_1722x1150.jpg 1722w"
+                <img style="width: 100%" src="assets/images/contact/img-3_574x383.webp" alt=""
+                    srcset="assets/images/contact/img-3_574x383.webp 574w, assets/images/contact/img-3_1148x766.webp 1148w, assets/images/contact/img-3_1722x1150.webp 1722w"
                     sizes="100vw">
             </div>
             <div class="container">
@@ -604,14 +774,18 @@
                     <div class="col-12">
                         <div class="link-widget">
                             <ul>
-                                <li><a href="https://www.facebook.com/alessandrafuenteswep"><i class="ti-facebook"></i></a></li>
-                                <li><a href="https://www.instagram.com/alessandrafuenteswep"><i class="fi flaticon-instagram-1"></i></a></li>
+                                <li><a href="https://www.facebook.com/alessandrafuenteswep"><i
+                                            class="ti-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com/alessandrafuenteswep"><i
+                                            class="fi flaticon-instagram-1"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="copyright">
-                            <p>© Copyright 2022 | <a href="index.html">Alessandrea Fuentes WEP</a> | All right reserved. | Desarrollador por <a href="https://www.linkedin.com/in/deygordillos/">Dey Gordillo</a> </p>
+                            <p>© Copyright 2022 | <a href="index.html">Alessandrea Fuentes WEP</a> | All right reserved.
+                                | Desarrollador por <a href="https://www.linkedin.com/in/deygordillos/">Dey Gordillo</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -646,6 +820,7 @@
 
     <!-- All JavaScript files
     ================================================== -->
+    <script async src="assets/js/lazysizes.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Plugins for this template -->
